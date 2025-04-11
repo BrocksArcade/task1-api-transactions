@@ -1,0 +1,204 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+        android:id="@+id/swipetorefehs"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/main"
+            style="@style/SCREEN_COLOR"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            tools:context=".dasshboard.ActivityHomescreen">
+
+            <ImageView
+                android:id="@+id/iv_darkmode"
+                android:layout_width="38dp"
+                android:layout_height="38dp"
+                android:layout_gravity="end"
+                android:layout_marginEnd="16dp"
+                android:background="@drawable/ic_darkmode"
+                android:backgroundTint="@color/black"
+                android:clickable="true"
+                android:drawableTintMode="add"
+                android:foregroundTintMode="add"
+                android:textAlignment="inherit"
+                app:backgroundTintMode="src_atop"
+                app:elevation="18dp"
+                app:layout_constraintBottom_toTopOf="@+id/cardView2"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="1.0"
+                app:layout_constraintStart_toEndOf="@+id/tv_tranactiontotal"
+                app:layout_constraintTop_toBottomOf="@+id/searchBar"
+                app:layout_constraintVertical_bias="0.47000003" />
+
+            <com.google.android.material.appbar.MaterialToolbar
+                android:id="@+id/materialToolbar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/secondaryColor"
+
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:subtitleTextColor="@color/white"
+                app:title="Welcome, Username"
+                app:titleTextColor="@color/white">
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/but_logout"
+                    android:layout_width="28dp"
+                    android:layout_height="38dp"
+                    android:layout_gravity="end"
+                    android:background="@drawable/ic_logout"
+                    android:backgroundTint="#FFFFFF"
+                    android:drawableTint="#FFFFFF"
+                    android:drawableTintMode="add"
+                    android:foregroundTint="#FFFFFF"
+                    android:foregroundTintMode="add"
+                    android:textAlignment="inherit"
+                    android:textColor="#FFFFFF"
+                    app:backgroundTintMode="src_atop"
+                    app:elevation="8dp"
+                    app:iconTint="#FFFFFF"
+                    app:iconTintMode="add"
+                    tools:layout_editor_absoluteX="383dp"
+                    tools:layout_editor_absoluteY="13dp" />
+            </com.google.android.material.appbar.MaterialToolbar>
+
+            <SearchView
+                android:id="@+id/searchBar"
+                style="@style/editTexts"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:focusable="true"
+                android:iconifiedByDefault="false"
+                android:imeOptions="actionSearch"
+                android:queryHint="Search for category/description"
+                android:visibility="visible"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/materialToolbar" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/tv_tranactiontotal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:text="Total Transactions:"
+                android:textSize="24dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.09"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/searchBar" />
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cardView2"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="8dp"
+                android:layout_marginVertical="8dp"
+                app:cardBackgroundColor="#ABCAFF"
+                app:cardCornerRadius="3dp"
+                app:cardElevation="0dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tv_tranactiontotal">
+
+                <HorizontalScrollView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_margin="8dp"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/textView5"
+                            style="@style/TEXT"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginHorizontal="8dp"
+                            android:layout_weight="1"
+                            android:text="ID"
+                            android:textSize="20sp"
+                            tools:text="ID" />
+
+                        <TextView
+                            android:id="@+id/textView6"
+                            style="@style/TEXT"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginHorizontal="8dp"
+                            android:layout_weight="1"
+                            android:text="Date"
+                            android:textSize="20sp" />
+
+                        <TextView
+                            android:id="@+id/textView4"
+                            style="@style/TEXT"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginHorizontal="8dp"
+                            android:layout_weight="1"
+                            android:text="Amount"
+                            android:textSize="20sp" />
+
+                        <TextView
+                            android:id="@+id/textView3"
+                            style="@style/TEXT"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginHorizontal="8dp"
+                            android:layout_weight="1"
+                            android:text="Category"
+                            android:textSize="20sp" />
+
+                        <TextView
+                            android:id="@+id/textView2"
+                            style="@style/TEXT"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginHorizontal="8dp"
+                            android:layout_weight="1"
+                            android:text="Decription"
+                            android:textSize="20sp" />
+                    </LinearLayout>
+                </HorizontalScrollView>
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rv_transactionview"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_marginBottom="32dp"
+                android:animateLayoutChanges="false"
+                android:animationCache="false"
+                android:elevation="16dp"
+                android:fitsSystemWindows="true"
+                android:isScrollContainer="true"
+                android:outlineAmbientShadowColor="#000000"
+                android:outlineSpotShadowColor="#000000"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="@+id/cardView2"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toStartOf="@+id/cardView2"
+                app:layout_constraintTop_toBottomOf="@+id/cardView2"
+                tools:itemCount="4"
+                tools:listitem="@layout/item_tranaction">
+
+            </androidx.recyclerview.widget.RecyclerView>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+</layout>
